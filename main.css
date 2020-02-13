@@ -236,6 +236,11 @@ body
 	box-shadow: 10px 10px 25px -1px rgba(237,101,224,1);
 }
 
+.mySlides > video:fullscreen
+{
+	border-radius: 0;
+}
+
 .prev, .next {
   cursor: pointer;
   position: absolute;
