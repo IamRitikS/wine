@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wine: Share Text on Webpage</title>
+	<link rel="icon" href="wine_enabled128.png" type="image/icon type">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"/>
+	<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+	<meta charset="UTF-8">
+
+</head>
+<body id="body">
+	<div class="body-container">
+		<header>
+			<div class="header-container blurrable">
+				<img src="wine_enabled.png" class="logo">			
+				<h1 class="logo-text">wine</h1>
+				<h2 class="description">Web Browser Extension</h2>
+				<button class="main-button" id="wait">Firefox</button>
+				<button class="main-button" id="donation">Chrome</button>
+			</div>	
+		</header>
+		<section>
+			<div class="content-container blurrable">
+					<!-- <video controls>
+					  <source src="screenshot.mp4" type="video/mp4">
+					  Your browser does not support the video tag.
+					</video>
+					Uh oh! Your employer account still has not been approved yet. We take utmost care in choosing the legit employers only to avoid fake ones from crowding our website with scam offers. This process will take around 10-12 hours. We request you to wait at least 24 hours before contacting us regarding this matter.
+					Uh oh! Your employer account still has not been approved yet. We take utmost care in choosing the legit employers only  -->
+
+				<div class="slideshow-container">
+
+					<div class="mySlides fade">
+						<img src="Screenshot 1.png">
+					</div>
+
+					<div class="mySlides fade">
+						<img src="Screenshot 2.png">
+					</div>
+
+					<div class="mySlides fade">
+						<img src="Screenshot 3.png">
+					</div>
+
+					<div class="mySlides fade">
+						<img src="Screenshot 4.png">
+					</div>
+
+					<div class="mySlides fade">
+						<video controls>
+							<source src="screenshot.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					</div>
+
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				</div>
+				
+				<br>
+
+				<div style="text-align:center">
+					<span class="dot" onclick="currentSlide(1)"></span>
+					<span class="dot" onclick="currentSlide(2)"></span>
+					<span class="dot" onclick="currentSlide(3)"></span>
+					<span class="dot" onclick="currentSlide(4)"></span>
+					<span class="dot" onclick="currentSlide(5)"></span>
+				</div>
+			</div>			
+		</section>
+
+		<div class="popup-notice" id="popup-notice-donation">
+			<div class="popup-notice-msg" id="popup-notice-msg">
+				Uh oh! Your employer account still has not been approved yet. We take utmost care in choosing the legit employers only to avoid fake ones from crowding our website with scam offers. This process will take around 10-12 hours. We request you to wait at least 24 hours before contacting us regarding this matter.
+			</div>
+			<div class="popup-notice-btn">
+				<a href="www.google.com"><button type="button" class="popup-notice-cls-btn">Donate</button></a>
+				<button type="button" class="popup-notice-cls-btn" id="popup-notice-cls-btn-donation">Nuh uh!</button>
+			</div>
+		</div>
+
+		<div class="popup-notice" id="popup-notice-help">
+			<div class="popup-notice-msg" id="popup-notice-msg">
+				Wine: Share Text on WebpageWine: Share Text on WebpageWine: Share Text on WebpageWine: Share Text on WebpageWine: Share Text on WebpageWine: Share Text on WebpageWine: Share Text on WebpageWine: Share Text on WebpageWine: Share Text on WebpageWine: Share Text on WebpageWine: Share Text on WebpageWine: Share Text on WebpageWine: Share Text on WebpageWine: Share Text on WebpageWine: Share Text on WebpageWine: Share Text on WebpageWine: Share Text on WebpageWine: Share Text on WebpageWine: Share Text on WebpageWine: Share Text on WebpageWine: Share Text on WebpageWine: Share Text on WebpageWine: Share Text on WebpageWine: Share Text on WebpageWine: Share Text on WebpageWine: Share Text on
+			</div>
+			<div class="popup-notice-btn">
+				<button type="button" class="popup-notice-cls-btn" id="popup-notice-cls-btn-help">Got it!</button>
+			</div>
+		</div>
+
+		<div class="popup-notice" id="popup-notice-wait">
+			<div class="popup-notice-msg" id="popup-notice-msg">
+				Uh oh! Your employer account still has not been approved yet. We take utmost care in choosing the legit employers only to avoid fake ones from crowding our website with scam offers. This process will take around 10-12 hours. We request you to wait at least 24 hours before contacting us regarding this matter.
+			</div>
+			<div class="popup-notice-btn">
+				<button type="button" class="popup-notice-cls-btn" id="popup-notice-cls-btn-wait">Okay</button>
+			</div>
+		</div>
+
+		<footer>
+			<div class="footer-container blurrable">
+				<button class="larger-button main-button" id="view_help">View Help</button>
+				<a href="www.google.com"><button type="button" class="larger-button main-button">Source Code</button></a>
+			</div>
+		</footer>
+
+	</div>
+</body>
+</html>
+
+<script type="text/javascript">
+
+document.getElementById("donation").addEventListener('click', function(event)
+{
+	showPopUpNotice("donation");
+});
+
+document.getElementById("popup-notice-cls-btn-donation").addEventListener('click', function(event)
+{
+	closePopUpNotice("donation");
+});
+
+document.getElementById("view_help").addEventListener('click', function(event)
+{
+	showPopUpNotice("help");
+});
+
+document.getElementById("popup-notice-cls-btn-help").addEventListener('click', function(event)
+{
+	closePopUpNotice("help");
+});
+
+document.getElementById("wait").addEventListener('click', function(event)
+{
+	showPopUpNotice("wait");
+});
+
+document.getElementById("popup-notice-cls-btn-wait").addEventListener('click', function(event)
+{
+	closePopUpNotice("wait");
+});
+
+function showPopUpNotice(option)
+{
+	$('.blurrable').addClass('blurr');
+	$('#body').addClass('block');
+	$('#popup-notice-'+option).fadeIn(600);
+}
+
+function closePopUpNotice(option)
+{
+	$('.blurrable').removeClass('blurr');
+	$('#body').removeClass('block');
+	document.getElementById('popup-notice-'+option).style.display="none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+</script>
