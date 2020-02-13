@@ -17,7 +17,7 @@
 				<img src="wine_enabled.png" class="logo">			
 				<h1 class="logo-text">wine</h1>
 				<h2 class="description">Web Browser Extension</h2>
-				<button class="main-button" id="wait">Firefox</button>
+				<a href="#"><button class="main-button" id="wait">Firefox</button></a>
 				<button class="main-button" id="donation">Chrome</button>
 			</div>	
 		</header>
@@ -70,7 +70,7 @@
 				Chrome asks developers to pay a one time $5 fee for them to be able to upload their apps on their web store. Would you like to be a dear and help me make this extension accessible for chrome users as well?
 			</div>
 			<div class="popup-notice-btn">
-				<a href="www.google.com"><button type="button" class="popup-notice-cls-btn">Donate</button></a>
+				<a href="#"><button type="button" class="popup-notice-cls-btn">Donate</button></a>
 				<button type="button" class="popup-notice-cls-btn" id="popup-notice-cls-btn-donation">Nuh uh!</button>
 			</div>
 		</div>
@@ -102,11 +102,20 @@
 				<button type="button" class="popup-notice-cls-btn" id="popup-notice-cls-btn-wait">Okay</button>
 			</div>
 		</div>
+		
+		<div class="popup-notice" id="popup-notice-testing">
+			<div class="popup-notice-msg" id="popup-notice-msg">
+				Extension code is still undergoing testing stage. It will soon be available here.
+			</div>
+			<div class="popup-notice-btn">
+				<button type="button" class="popup-notice-cls-btn" id="popup-notice-cls-btn-testing">Okay</button>
+			</div>
+		</div>
 
 		<footer>
 			<div class="footer-container blurrable">
 				<button class="larger-button main-button" id="view_help">View Help</button>
-				<a href="https://www.google.com"><button type="button" class="larger-button main-button">Source Code</button></a>
+				<a href="#"><button type="button" class="larger-button main-button">Source Code</button></a>
 			</div>
 		</footer>
 
@@ -138,12 +147,24 @@ document.getElementById("popup-notice-cls-btn-help").addEventListener('click', f
 
 document.getElementById("wait").addEventListener('click', function(event)
 {
+	event.preventDefault();
 	showPopUpNotice("wait");
 });
 
 document.getElementById("popup-notice-cls-btn-wait").addEventListener('click', function(event)
 {
 	closePopUpNotice("wait");
+});
+
+document.getElementById("testing").addEventListener('click', function(event)
+{
+	event.preventDefault();
+	showPopUpNotice("testing");
+});
+
+document.getElementById("popup-notice-cls-btn-testing").addEventListener('click', function(event)
+{
+	closePopUpNotice("testing");
 });
 
 function showPopUpNotice(option)
